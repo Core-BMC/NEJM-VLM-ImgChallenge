@@ -43,6 +43,15 @@ Follow these steps to run the project:
    - The `NEJM_Question.pptx` file was prepared by downloading PowerPoint slides from the [NEJM Image Challenge website](https://www.nejm.org/image-challenge). This file binds together the question slides (first page) from each downloaded PowerPoint slide set.
    - Extract text and images from `NEJM_Question.pptx` and save text to `NEJM_list.xlsx` and images to `pptimages` folder.
 
+      **Note:** We provide a code that processes the `NEJM_Question.pptx` file to extract images and text into the pptimages folder and `NEJM_list.xlsx` file. Subsequently, `NEJM_list.xlsx` includes radiologists' labels and section information regarding the modality and body part of the image challenge (paper in process).
+  
+    Place your PPTX file in the same directory as the script. Ensure the file name is `NEJM_Question.pptx`.
+
+    ```bash
+      python 0.NEJM_pptx_preproc.py
+    ```
+
+
 2. **OPENAI GPT**: (1.1.x request to OpenAI GPT vision model)
 
    - Input: `NEJM_list.xlsx`, `pptimages` (folder)
