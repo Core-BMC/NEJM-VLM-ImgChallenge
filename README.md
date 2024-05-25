@@ -76,6 +76,38 @@ Follow these steps to run the project:
     ```
 
 
+1s. **Local Environment Setup**
+
+  - If API keys are already configured in the environment
+      Nothing to do.
+
+  - Environment-specific configuration using python-dotenv
+      
+    1. Install the python-dotenv library:
+      
+        ```bash
+        pip install python-dotenv
+        ```
+    2. Set up a `.env` file in the root directory of your project.
+    3. Open the .env file and paste in your secret API keys as follows:
+       ```.env
+       OPENAI_API_KEY=sk-12345678901234567890
+       GOOGLE_API_KEY=AI12345678901234567890
+       ANTHROPIC_API_KEY=sk-ant-api12-34567890
+       ```
+    4. Open your Python file and add the following code to load the environment variables:
+       ```python
+       import os
+       from dotenv import load_dotenv
+
+       load_dotenv()
+
+       OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+       GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+       ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+       ```
+
+
 2. **OPENAI GPT**: (1.1.x request to OpenAI GPT vision model)
 
    - Input: `NEJM_list.xlsx`, `pptimages` (folder)
