@@ -261,8 +261,11 @@ def main():
                         'try': try_number,
                         'time': execution_time,
                     }
+                    # Filter out empty or all-NA entries before concatenating
+                    df_execution_times = df_execution_times.dropna(how='all')
+                    new_row_df = pd.DataFrame([new_row]).dropna(how='all')
                     df_execution_times = pd.concat(
-                        [df_execution_times, pd.DataFrame([new_row])], ignore_index=True
+                        [df_execution_times, new_row_df], ignore_index=True
                     )
 
                 if result:
