@@ -53,21 +53,21 @@ def extract_images_from_pptx(pptx_path):
                     img_index += 1
 
     # Save data to Excel file
-    save_text_to_excel(data, 'NEJMImageChallenge.xlsx')
+    save_text_to_excel(data, 'NEJM_list.xlsx')
 
     print(f'Images are extracted and saved in {output_folder}, skipping smaller images.')
-    print('Texts are extracted and saved in NEJMImageChallenge.xlsx.')
+    print('Texts are extracted and saved in NEJM_list.xlsx.')
 
 def save_text_to_excel(data, excel_path):
     """
     Save extracted text and image paths to an Excel file.
     """
-    df = pd.DataFrame(data, columns=["Image path", "NEJM-Image-Challenge"])
+    df = pd.DataFrame(data, columns=["Image path", "Q"])
     df.to_excel(excel_path, index=False)
 
 def main():
     # Specify the path to the "COMBINED" first page(s) download PPTX file
-    pptx_path = 'NEJMImageChallenge_Combined.pptx'
+    pptx_path = 'NEJM_Question.pptx'
     extract_images_from_pptx(pptx_path)
 
 if __name__ == "__main__":
