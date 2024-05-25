@@ -2,18 +2,19 @@
 
 ---
 
-### Project Overview
+## Overview
 
-This project utilizes vision models and vision large language models (VLMs) to analyze and solve medical image challenges from the New England Journal of Medicine (NEJM) Image Challenge. The goal is to leverage advanced AI models to interpret medical images and provide educational insights.
+This project utilizes vision models and vision large language models (VLMs) to analyze and solve medical image challenges from [the **New England Journal of Medicine** (NEJM) **Image Challenge**](https://www.nejm.org/image-challenge). The goal is to leverage advanced vision models to interpret medical images and provide educational insights.
 
 ## Table of Contents
 
-- [NEJM VLM Image Challenge #1](#nejm-vlm-image-challenge-1)
+- [NEJM VLM Image Challenge](#nejm-vlm-image-challenge)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
   - [Contact](#contact)
+  - [Acknowledgements](#acknowledgements)
 
 ## Installation
 
@@ -25,12 +26,35 @@ Follow these steps to install the project:
    git clone https://github.com/Core-BMC/NEJM-VLM-ImgChallenge.git
    ```
 
-2. Navigate into the project directory and install the required packages:
+2. Navigate into the project directory:
 
    ```bash
    cd NEJM-VLM-ImgChallenge
+   ```
+
+3. Create a virtual environment:
+
+   ```bash
+   python -m venv venv
+   ```
+
+4. Activate the virtual environment:
+    - On Windows:
+      ```bash
+      .\venv\Scripts\activate
+      ```
+
+    - On macOS and Linux:
+      ```bash
+      source venv/bin/activate
+      ```
+
+3. Install the required packages:
+
+   ```bash
    pip install -r requirements.txt
    ```
+
 
 ## Usage
 
