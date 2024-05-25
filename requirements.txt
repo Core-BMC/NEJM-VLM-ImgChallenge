@@ -1,0 +1,17 @@
+python-pptx>=0.6.22
+pandas>=2.2.2
+openai>=1.30.0
+PyMuPDF>=1.23.7
+openpyxl>=3.1.2
+langchain>=0.1.4
+langchain-cli>=0.0.20
+langchain-community>=0.0.17
+langchain-core>=0.1.17
+langchain-experimental>=0.0.47
+langchain-google-genai>=0.0.4
+langchain-openai>=0.0.5
+langchainhub>=0.1.14
+langdetect>=1.0.9
+langserve>=0.0.39
+langsmith>=0.0.85
+anthropic>=0.26.1
