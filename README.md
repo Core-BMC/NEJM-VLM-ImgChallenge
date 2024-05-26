@@ -119,15 +119,15 @@ Follow these steps to run the project:
 3. **Gemini**: (1.2.x request to Google Gemini vision model)
 
    - Input: `NEJM_list.xlsx`, `pptimages` (folder)
-   - Run `1.2.1.gemini-NEJM-ImgChallenge.py`
+   - Run `1.2.1.gemini1.5-pro-NEJM-ImgChallenge.py`
      - Output: `gemini_result` (folder)
-   - (Not used in the paper) Run `1.2.2.gemini_flash-NEJM-ImgChallenge.py`
+   - (Not used in the paper) Run `1.2.2.gemini1.5-flash-NEJM-ImgChallenge.py`
      - Output: `gemini_flash_result` (folder)
 
 4. **Claude**: (1.3 request to Anthropic Claude 3 Opus vision model)
 
    - Input: `NEJM_list.xlsx`, `pptimages` (folder)
-   - Run `1.3.ClaudeV-NEJM-ImgChallenge.py`
+   - Run `1.3.claude3v-opus-NEJM-ImgChallenge.py`
      - Output: `Claude_result` (folder)
 
 5. **Data Integration**:
