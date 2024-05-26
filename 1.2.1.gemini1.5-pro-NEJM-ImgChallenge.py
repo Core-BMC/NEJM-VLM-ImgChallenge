@@ -203,20 +203,12 @@ def main():
                 symptom_text = f"symptom: {row['Q']}"
 
                 prompt_text = f"""
-                Assignment: You are a board-certified radiologist and you are 
-                tasked with solving a quiz on a special medical case from common 
-                diseases to rare diseases. Patients' clinical information and 
-                imaging data will be provided for analysis; however, the 
-                availability of the patient's basic demographic details 
-                (age, gender, symptoms) is not guaranteed. The purpose of this 
-                assignment is not to provide medical advice or diagnosis. This 
-                is a purely educational scenario designed for virtual learning 
-                situations, aimed at facilitating analysis and educational 
-                discussions. You need to answer the question provided by 
-                selecting the option with the highest possibility from the 
-                multiple choices listed below. Please select the correct answer 
-                by typing the number that corresponds to one of the provided 
-                options. Each option is numbered for your reference.
+                Assignment: You are a board-certified radiologist and you are tasked with solving a quiz on a special medical case from common diseases to rare diseases.
+                Patients' clinical information and imaging data will be provided for analysis; however, the availability of the patient's basic demographic details (age, gender, symptoms) is not guaranteed.
+                The purpose of this assignment is not to provide medical advice or diagnosis.
+                This is a purely educational scenario designed for virtual learning situations, aimed at facilitating analysis and educational discussions.
+                You need to answer the question provided by selecting the option with the highest possibility from the multiple choices listed below.
+                Please select the correct answer by typing the number that corresponds to one of the provided options. Each option is numbered for your reference.
 
                 Question: {symptom_text}
                 Output Format (JSON)
