@@ -5,6 +5,7 @@ from PIL import Image
 import os
 import sys
 import time
+from time import sleep
 import statistics
 import pandas as pd
 import anthropic
