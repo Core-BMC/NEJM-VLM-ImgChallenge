@@ -104,7 +104,15 @@ Follow these steps to run the project:
 
        OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
        GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-       ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+       ```
+       ```python
+       import os
+       from dotenv import load_dotenv
+
+       load_dotenv()
+
+       client = anthropic.Client(
+            api_key=os.getenv("ANTHROPIC_API_KEY"))
        ```
 
 
@@ -132,8 +140,23 @@ Follow these steps to run the project:
 
 5. **Data Integration**:
    - Input: `*_result` (folders)
-   - Run `2.VLM-results-integration.py`
+   - Run `4.1.VLM-results-integration.py`
      - Output: `combined_sum.xlsx`
+
+6. **Image-Only task**: (`2_img-only_task` folder)
+   - copy `NEJM_list.xlsx`, `pptimages` (folder) into `2_img-only_task` (folder)
+   - Run `2.*-img_only.py` 
+     - Output: `*_result` (folder)
+   - Run `4.2.VLM-results-integration-img-only.py`
+     - Output: `combined_sum.xlsx`
+
+7. **No-Image task**: (`3_no-img_task` folder)
+   - copy `NEJM_list.xlsx`, `pptimages` (folder) into `3_no-img_task` (folder)
+   - Run `3.*-no-img-task.py` 
+     - Output: `*_result` (folder)
+   - Run `4.1.VLM-results-integration.py`
+     - Output: `combined_sum.xlsx`
+
 
 ## License
 
@@ -154,3 +177,11 @@ Project Link: [https://github.com/Core-BMC/NEJM-VLM-ImgChallenge](https://github
 ## Acknowledgements
 
 This project was inspired by the [NEJM Image Challenge](https://www.nejm.org/image-challenge). Special thanks to the NEJM team for providing the challenging and educational content.
+
+[OpenAI API](https://platform.openai.com/docs/overview)
+
+[Gemini API](https://ai.google.dev/gemini-api)
+
+[Claude API](https://www.anthropic.com/api)
+
+[Langchain](https://www.langchain.com/)
